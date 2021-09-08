@@ -18,7 +18,7 @@
 #define ZSH_UNSETENV_CMD "unsetenv"
 #define ZSH_WHICH "which"
 
-#define SIGSEGV_MESSAGE "Invalid memory reference"
+#define SIGSEGV_MESSAGE "segfault"
 
 #include <stdio.h>
 #include <unistd.h>
