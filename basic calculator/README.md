@@ -1,34 +1,8 @@
-# my_bc (my basic calculator)
+# bc (my basic calculator)
 
-"6/(-2+3)"
 
-*-
-/-
-+-
-(-
-%-
---
 ________________________________________________________
--4/2
-
-Values:
-    2
-Operators:
-    + 
-+ -> +1
-    2 * +1
-- -> -1
-    2 * -1
-________________________________________________________
-
--(-((-4)+-6))
-
-values:
-	-4,-6
-Operand:
-	-(-(+
-________________________________________________________
-
+Pseudo code:
 
 Two stacks to track VALUES and OPERATOR
 Interate through the input string
@@ -95,24 +69,6 @@ int evaluate(argv)
             REPEAT THIS: -> pop the top two numbers off struct -> VALUES and perform the top struct -> OPERATOR
                         push result to struct -> VALUES
 
-
-Valid test cases
-    ./my_bc "1"
-    ./my_bc "1+1
-    ./my_bc "1+2*(3-42)%5"
-        Expected result: -2
-    
-    ./my_bc "15/4"
-        Expected result: 3
-
-Error test cases
-A proper runtime error because of the divison by zero.
-    ./my_bc "312/0"
-Syntax Error
-    ./my_bc "1+/+2"
-    ./my_bc "321()""
-Error, unknown lexeme
-    ./my_bc "1+bonjour"
 
 
 The project is completed by Konstantin Melkov and Demitrus Booker
