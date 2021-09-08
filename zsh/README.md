@@ -13,13 +13,14 @@ Only basic command lines are to be executed; no pipes, redirections or any other
 There are two types of commands: zsh built-ins and binary.
 
 The built-in commands include:
-    1) "cd" is a command used to change the current working directory.  In case the directory doesn't exit or the user doesn't have permissions to get into the directory the command is not
-        executed and a prompt is diplayed instead. The cd commands supports the following options:
-        - "cd .." will move the user up one directory;
-        - "cd -" will switch the user to the previous directory;
-        - "cd dir" (without a /) will put the user in a subdirectory;
-        - "cd /[path]" will put the user into directory of the [path];
-       
+
+    1) "cd" is a command used to change the current working directory. In case the directory doesn't exist or the user doesn't have permissions to access the directory the command is not executed and a prompt is displayed.
+        the cd command supports the following options:
+        - "cd .." moves the user up one directory;
+        - "cd -" switches to the previously visited directory;
+        - "cd dir" (withouth a "/") puts the user in a subdirectory;
+        - "cd /[path]" puts the user into the directory of the [path].
+    
     2) "pwd" is a command to display the current working directory.
 
     3) "echo" is a command that outputs the strings that is being passed as arguments.
