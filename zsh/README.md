@@ -10,7 +10,7 @@ Zsh is a command interpreters. It runs in a loop
 
 Only basic command lines are to be executed; no pipes, redirections or any other advanced features.
 
-There are two types of commands: my_zsh built-ins and binary.
+There are two types of commands: zsh built-ins and binary.
 
 The built-in commands include:
     1) "cd" is a command used to change the current working directory.  In case the directory doesn't exit or the user doesn't have permissions to get into the directory the command is not
@@ -19,7 +19,7 @@ The built-in commands include:
         - "cd -" will switch the user to the previous directory;
         - "cd dir" (without a /) will put the user in a subdirectory;
         - "cd /[path]" will put the user into directory of the [path];
-        
+       
     2) "pwd" is a command to display the current working directory.
 
     3) "echo" is a command that outputs the strings that is being passed as arguments.
@@ -46,14 +46,14 @@ To run a binary executable that is located in the current working directory the 
 When a binary command is being executed the programm follows the scheme below:
 
             parent process
-            --------------------------------> wait() -----> resumes
-            |                                  ^
-            |                                  |
-fork() ----                                                                        |
-                   |                                                                   |
-                   |                                                                   |
-                   -------------> execve() -------------> exit() --
-                  child process
+            ---------------------------------------> wait() -----> resumes
+            |                                          ^
+            |                                          |
+fork() ----                                            |
+            |                                          |
+            |                                          |
+             -------------> execve() -------------> exit()
+             child process
 
 If a child process exited with a signal the signal number is displaed in the stdout but the error is not explained.
 
