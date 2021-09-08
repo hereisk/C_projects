@@ -46,15 +46,16 @@ To run a binary executable that is located in the current working directory the 
 
 When a binary command is being executed the programm follows the scheme below:
 
-            parent process
-            ---------------------------------------> wait() -----> resumes
-            |                                          ^
-            |                                          |
-fork() ----                                            |
-            |                                          |
-            |                                          |
-             -------------> execve() -------------> exit()
-             child process
+                     parent process
+                     ---------------------------------------> wait() -----> resumes
+                     |                                          ^
+                     |                                          |
+            fork() --                                           |
+                     |                                          |
+                     |                                          |
+                     -----------> execve() -----------------> exit()
+                     child process
+                     
 
 If a child process exited with a signal the signal number is displaed in the stdout but the error is not explained.
 
