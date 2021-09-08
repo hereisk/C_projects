@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS  += -Wall -Werror -Wextra -g3 -fsanitize=address
-MAIN = my_zsh
+MAIN = zsh
 SRCS = $(wildcard src/*.c)
 OBJS = $(SRCS:.c=.o)
 
