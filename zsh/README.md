@@ -2,13 +2,10 @@
 
 Zsh is a command interpreters. It runs in a loop
 
--> 
+->
 |  Read: Read the command from standard input.
-
 |  Parse: Separate the command string into a program and arguments.
-
 |  Execute: Run the parsed command.
-
 |-- (repeat)
 
 Only basic command lines are to be executed; no pipes, redirections or any other advanced features.
